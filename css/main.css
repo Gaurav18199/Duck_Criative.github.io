@@ -954,14 +954,41 @@ color-mix(in srgb, var(--default-color), transparent 30%);
   margin-right: 10px; /* Space between checkmark and text */
 }
 
+.button {
+  border: none;
+  color: white;
+  padding: 10px 32px; /* Adjust padding to make the button area larger */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block; /* Ensures the button behaves properly */
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s; /* Smooth hover transition */
+  cursor: pointer;
+  border-radius: 5px; /* Add consistent border-radius */
+}
+
+.button2 {
+  background-color: transparent;
+  color: rgb(255, 255, 255); 
+  border: 2px solid var(--accent-color); /* Yellow border */
+}
+
+.button2:hover {
+  background-color: var(--accent-color); /* Green background on hover */
+  color: rgb(55, 55, 55); /* White text */
+}
+
+
+
+
 
 .social-icons {
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: end;
-  margin: 25px 0;
-  gap: 15px;
+  gap: 10px;
 }
 
 .social-icons a {
