@@ -29,7 +29,7 @@
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: rgba(0, 0, 0, 0.905);  /* The default color of the main navmenu links */
+  --nav-color: rgba(55, 55, 55, 0.905);  /* The default color of the main navmenu links */
   --nav-hover-color: #ffc451; /* Applied to main navmenu links when they are hovered over or active */
   --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
   --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
@@ -268,36 +268,37 @@ h6 {
     position: relative;
   }
 
-  .navmenu a,
-  .navmenu a:focus {
-    color: var(--nav-color);
+  .navmenu a {
+    color: var(--nav-color); /* Default color */
+    text-decoration: none; /* Remove default underline */
+    position: relative; /* Needed for the ::after pseudo-element */
     padding: 18px 15px;
     font-size: 16px;
     font-family: var(--nav-font);
     font-weight: 400;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
+    display: inline-block;
+    transition: color 0.3s; /* Smooth color change */
   }
 
-  .navmenu a i,
-  .navmenu a:focus i {
-    font-size: 12px;
-    line-height: 0;
-    margin-left: 5px;
-    transition: 0.3s;
+  .navmenu a::after {
+    content: ""; /* Add an empty content for underline */
+    position: absolute;
+    bottom: 5px; /* Distance from text */
+    left: 0;
+    width: 0;
+    height: 2px; /* Thickness of the underline */
+    background-color: var(--nav-hover-color); /* Underline color */
+    transition: width 0.3s ease-in-out; /* Smooth underline animation */
   }
-
-  .navmenu li:last-child a {
-    padding-right: 0;
+  
+  .navmenu li:hover > a::after, 
+  .navmenu .active > a::after {
+    width: 100%; /* Full width underline on hover or active */
   }
-
-  .navmenu li:hover>a,
-  .navmenu .active,
-  .navmenu .active:focus {
-    color: var(--nav-hover-color);
+  
+  .navmenu li:hover > a,
+  .navmenu .active > a {
+    color: var(--nav-hover-color); /* Change text color on hover or active */
   }
 
   .navmenu .dropdown ul {
@@ -979,6 +980,7 @@ color-mix(in srgb, var(--default-color), transparent 30%);
 .social-icons a:hover i {
   transform: scale(1.2); /* Scale up the icon on hover */
 }
+
 
 /*--------------------------------------------------------------
 # About Section
