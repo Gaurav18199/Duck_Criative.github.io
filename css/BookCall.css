@@ -1,0 +1,98 @@
+
+  /* General Styles */
+
+  
+  .bookcall {
+    display: flex;
+    width: 88%;
+    max-width: 1200px;
+    border-radius: 10px; /* Smooth corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    overflow: hidden; /* Prevents content overflow */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+   
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+   .right-section h1 {
+    color: #d3f350;
+  }
+  /* Left Section */
+  .left-section {
+    flex: 1; /* Occupies half the space */
+    /* padding: 40px 20px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  
+  .left-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #d3f350; /* Darker shade for text */
+  }
+  
+  .left-section p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #d3f350; /* Medium shade for contrast */
+  }
+  
+  /* Right Section */
+  .right-section {
+    
+  }
+  
+  .right-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: #d3f350; /* Matches the left-section text color */
+  }
+  
+  /* Form Styling */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Adds spacing between form elements */
+  }
+  
+  form input, form textarea {
+    width: 100%; /* Full width */
+    padding: 12px; /* Comfortable padding */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Smooth edges */
+    font-size: 1rem;
+    color: #333333;
+  }
+  
+  form input::placeholder, form textarea::placeholder {
+    color: #aaa; /* Placeholder text in light gray */
+  }
+  
+  form textarea {
+    resize: none; /* Disable resizing */
+  }
+  
+  button {
+    background-color:transparent; /* Calm blue color */
+    color: #ffffff; /* White text */
+    padding: 11px 0px; /* Adequate spacing */
+    border: solid #d3f350;
+    border-radius: 8px; /* Smooth edges */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+  }
+  
+  button:hover {
+    background-color: #d3f350; /* Darker blue shade */
+    color: black;
+
+  }
+  
